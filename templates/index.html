@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 2.5vh;
+            padding: 0 5vw;
+        }
+
+        .left-column {
+            width: 15%;
+            background-color: white;
+            border-left: 3px solid #E1BE97;
+            border-right: 1px solid #F9F4E9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .blog-title {
+            padding-left: 20%;
+            font-size: 1vh;
+            color: #664401;
+        }
+
+        .blog-title h1 {
+            font-size: 2vh;
+            color: #664401;
+            text-align: center;
+            padding: 15% 0 0 20%;
+        }
+
+        .nav-menu {
+            padding: 20px 0;
+        }
+
+        .nav-item {
+            padding: 10px 20px;
+            font-size: 1.8vh;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: #664401;
+            font-weight: bold;
+        }
+
+        .right-column {
+            width: 85%;
+            padding: 0 20px;
+        }
+
+        .module {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .module h2 {
+            font-size: 2.5vh;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .notes-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .note-card {
+            background-color: #F9F4E9;
+            border-radius: 10px;
+            padding: 15px;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .note-card:hover {
+            border: 1px solid #E1BE97;
+        }
+
+        .note-card p:first-child {
+            font-size: 1.5vh;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .note-card p:last-child {
+            font-size: 1vh;
+            color: gray;
+        }
+
+        .blog-item {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .blog-image {
+            width: 500px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .blog-content {
+            flex: 1;
+        }
+
+        .blog-content h3 {
+            font-size: 2.5vh;
+            margin-bottom: 10px;
+        }
+
+        .blog-content p {
+            font-size: 1.5vh;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <div class="left-column">
+            <div class="blog-title">
+                <h1>个人博客</h1>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-item" data-page="0">主页</div>
+                <div class="nav-item" data-page="1">关于我</div>
+                <div class="nav-item" data-page="2">博客</div>
+                <div class="nav-item" data-page="3">笔记</div>
+                <div class="nav-item" data-page="4">知识库</div>
+                <div class="nav-item" data-page="5">智能体</div>
+            </div>
+        </div>
+
+        <!-- 右侧内容区域 -->
+        <div class="right-column">
+            <!-- 我的笔记模块 -->
+            <div class="module">
+                <h2>我的笔记</h2>
+                <div class="notes-container">
+                    <div class="note-card">
+                        <p>生活中的无形画布</p>
+                        <p>日期：2024.10.5</p>
+                    </div>
+                    <div class="note-card">
+                        <p>塑造AI的魔法</p>
+                        <p>日期：2024.10.10</p>
+                    </div>
+                    <div class="note-card">
+                        <p>园艺中生命哲学的呼吸感</p>
+                        <p>日期：2024.10.15</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 最近的博客模块 -->
+            <div class="module">
+                <h2>最近博客</h2>
+                <div class="blog-item">
+                    <img src="https://img.alicdn.com/imgextra/i2/O1CN01VjWLAB21Zb4eAatD8_!!6000000006999-2-tps-928-1232.png" alt="活力的源泉：健康生活的艺术与科学" class="blog-image">
+                    <div class="blog-content">
+                        <h3>活力的源泉：健康生活的艺术与科学</h3>
+                        <p>健康生活不仅仅是关于身体的活力，它是一种全面的生活方式，涉及到身体、心灵和精神的和谐统一。在这个快节奏的世界中，我们如何找到保持活力的秘诀？首先，我们需要理解健康生活的艺术——这包括了营养均衡的饮食、规律的运动...</p>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <img src="https://img.alicdn.com/imgextra/i1/O1CN01n5bYVC1LISOAf9gSM_!!6000000001276-2-tps-1232-928.png" alt="在风景与人群中寻找内心的宁静角落" class="blog-image">
+                    <div class="blog-content">
+                        <h3>在风景与人群中寻找内心的宁静角落</h3>
+                        <p>在喧嚣的城市中，我们常常感到内心的喧哗和不安。然而，即使在最繁忙的街道和最拥挤的人群中，我们也能找到一片属于自己的宁静角落。这需要我们获得一种内在的力量，这是一种能够在外部世界的纷扰中保持内心平静的能力...</p>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <img src="https://img.alicdn.com/imgextra/i2/O1CN01Fi9JNQ1e59aJxBRji_!!6000000003819-2-tps-1232-928.png" alt="记录艺术中时间与记忆的交汇" class="blog-image">
+                    <div class="blog-content">
+                        <h3>记录艺术中时间与记忆的交汇</h3>
+                        <p>艺术是时间的容器，它捕捉并保存了特定时刻的情感和体验。每一件艺术作品都是艺术家与时间对话的结果，是过去、现在和未来交汇的点。在艺术中记录时间与记忆的交汇，是一种深刻的文化实践，它让我们得以窥见历史的深度和人性的复杂性...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 添加导航项点击事件
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // 移除所有项的加粗样式
+                document.querySelectorAll('.nav-item').forEach(nav => {
+                    nav.style.fontWeight = 'normal';
+                });
+                
+                // 为当前点击项添加加粗样式
+                this.style.fontWeight = 'bold';
+                
+                // 这里可以添加页面切换的逻辑
+                console.log('切换到页面:', this.textContent);
+            });
+        });
+
+        // 添加笔记卡片悬停效果
+        document.querySelectorAll('.note-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.border = '1px solid #E1BE97';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.border = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
